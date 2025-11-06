@@ -453,9 +453,33 @@ body {
 
     background-attachment: fixed;}	
 	
+<script>
+document.getElementById("dataForm").addEventListener("submit", async function(e) {
+  e.preventDefault(); // Biar gak reload halaman
+
+  const form = e.target;
+  const formData = new FormData(form);
+
+  try {
+    const response = await fetch(form.action, {
+      method: "POST",
+      body: formData,
+      mode: "no-cors" // penting biar tidak kena blocked CORS
+    });
+
+    alert("✅ Data berhasil dikirim! Terima kasih sudah bermain!");
+    form.reset(); // reset form setelah kirim
+
+  } catch (error) {
+    alert("❌ Terjadi kesalahan. Coba lagi nanti.");
+    console.error("Error:", error);
+  }
+});
+</script>
  
 </body>
 </html>
+
 
 
 
