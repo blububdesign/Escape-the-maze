@@ -1,6 +1,8 @@
 <html>
 <head>
     <title>Escape the Maze</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <style>
         body {
             background: url('labirin bg.jpeg') no-repeat center center fixed;
@@ -80,6 +82,8 @@
         marquee {
             font-size: 18px;
         }
+		
+		
     </style>
 </head>
 <body>
@@ -192,14 +196,55 @@
 		<p style="margin-top: 500px;"> </p>
     </div>
 
-    <div id="keempat" class="section"style="text-align: left; width: 80%; margin: 0 auto;">
-        <h2 p align ="center" size="10"> "ESCAPE THE MAZE"</h2>
-		<hr font color ="red">	
-        <h1 style="color: white; text-align: center;">SIAPKAH ANDA UNTUK MEMULAI TANTANGAN INI?</h1>
-	
-    <a href="https://www.roblox.com/share?code=cafbfb341bc4be48b72d92019319e652&type=ExperienceDetails&stamp=1756636948905" target="_blank" style="color: lightblue; font-size: 24px; text-decoration: none; display:block; text-align:center; margin-top:20px;">
-        Klik di sini untuk bermain di Roblox
+    <div id="keempat" class="section" style="text-align: left; width: 80%; margin: 0 auto;">
+  <h2 align="center" style="color: white; font-size: 36px; text-shadow: 0 0 20px red;">"ESCAPE THE MAZE"</h2>
+  <hr style="border: 1px solid red; width: 80%;">
+  <h1 style="color: white; text-align: center;">SIAPKAH ANDA UNTUK MEMULAI TANTANGAN INI?</h1>
+
+  <!-- 🔥 Tombol Roblox versi super menonjol -->
+  <div style="text-align:center; margin-top: 50px;">
+    <a href="https://www.roblox.com/share?code=cafbfb341bc4be48b72d92019319e652&type=ExperienceDetails&stamp=1756636948905"
+       target="_blank"
+       class="roblox-link">
+        MULAI GAME DI ROBLOX 
     </a>
+  </div>
+</div>
+
+<style>
+.roblox-link {
+  display: inline-block;
+  font-size: 30px;
+  font-weight: bold;
+  color: #ffffff;
+  background: linear-gradient(180deg, #ff0000, #660000);
+  padding: 20px 45px;
+  border: 4px solid #ffaaaa;
+  border-radius: 18px;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  text-shadow: 0 0 10px #fff, 0 0 25px #ff4444, 0 0 40px #ff0000;
+  box-shadow: 0 0 40px #ff0000, inset 0 0 20px #440000;
+  transition: all 0.3s ease-in-out;
+  animation: flicker 1.5s infinite;
+}
+
+.roblox-link:hover {
+  background: linear-gradient(180deg, #ff3333, #aa0000);
+  box-shadow: 0 0 60px #ff3333, 0 0 100px #ff0000;
+  transform: scale(1.1);
+  color: #ffffcc;
+  text-shadow: 0 0 20px #fff, 0 0 50px #ffaaaa;
+}
+
+/* efek menyala berkedip */
+@keyframes flicker {
+  0%, 100% { opacity: 1; box-shadow: 0 0 30px #ff0000, 0 0 60px #ff3333; }
+  50% { opacity: 0.85; box-shadow: 0 0 50px #ff3333, 0 0 100px #ff0000; }
+}
+</style>
+
 
 		<p style="font-size: 100px; text-align: center;">
   <a href="#ketiga">&#8617;</a> &nbsp; 
@@ -283,6 +328,7 @@
       <input type="radio" id="star2" name="rating" value="2"><label for="star2" title="2 bintang">★</label>
       <input type="radio" id="star1" name="rating" value="1"><label for="star1" title="1 bintang">★</label>
     </div><br><br>
+	<p class="petunjuk"> silahkan mengisi rating pengaalaman bermain game nya </p>
 
     <label for="ulasan">Ulasan Pemain:</label><br>
     <textarea id="ulasan" name="ulasan" rows="5" placeholder="Tulis kesan dan saranmu di sini" required></textarea><br><br>
@@ -366,7 +412,7 @@ body {
   box-shadow: 0 0 15px #ff0000;
 }
 
-/* 🌟 RATING BINTANG BESAR */
+/* 🌟 RATING BINTANG SUPER JELAS */
 .rating-label {
   display: block;
   margin-bottom: 20px;
@@ -378,11 +424,11 @@ body {
 
 .rating-stars {
   display: flex;
-  flex-direction: row-reverse; /* agar klik dari kiri */
+  flex-direction: row-reverse;
   justify-content: center;
   align-items: center;
   gap: 25px;
-  font-size: 90px;
+  font-size: 100px;
   margin-top: 10px;
 }
 
@@ -391,23 +437,41 @@ body {
 }
 
 .rating-stars label {
-  color: #300000;
-  text-shadow: 0 0 15px #150000;
+  color: #ffcccc; /* ⭐ default terang */
+  text-shadow: 0 0 5px #fff, 0 0 10px #ff000050; /* glow lembut */
   cursor: pointer;
   transition: all 0.25s ease-in-out;
   transform: scale(1);
+  filter: drop-shadow(0 0 5px #aa0000);
 }
 
 /* efek hover & klik */
 .rating-stars label:hover,
 .rating-stars label:hover ~ label {
-  color: #ff2222;
-  text-shadow: 0 0 20px red, 0 0 40px #ff0000;
-  transform: scale(1.2);
+  color: #ff4444;
+  text-shadow: 0 0 20px #ff0000, 0 0 40px #ff6666, 0 0 60px #ff0000;
+  transform: scale(1.3);
 }
+
 .rating-stars input:checked ~ label {
   color: #ff0000;
-  text-shadow: 0 0 25px #ff0000, 0 0 45px #ff4444;
+  text-shadow: 0 0 25px #ff0000, 0 0 60px #ff4444, 0 0 80px #ff0000;
+  filter: drop-shadow(0 0 15px #ff0000);
+}
+
+.petunjuk {
+  text-align: center;
+  margin-top: 15px;
+  font-size: 18px;
+  color: #ff8888;
+  text-shadow: 0 0 10px #ff0000;
+  letter-spacing: 1px;
+  animation: flicker 2.5s infinite ease-in-out;
+}
+
+@keyframes flicker {
+  0%, 100% { opacity: 1; text-shadow: 0 0 8px #ff0000; }
+  50% { opacity: 0.8; text-shadow: 0 0 20px #ff3333; }
 }
 
 /* 🌟 TOMBOL KIRIM */
@@ -433,6 +497,7 @@ body {
   transform: scale(1.05);
 }
 </style>
+
 
 
 
@@ -479,7 +544,6 @@ document.getElementById("dataForm").addEventListener("submit", async function(e)
  
 </body>
 </html>
-
 
 
 
